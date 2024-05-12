@@ -51,15 +51,6 @@
 		background-color: white;
 		padding: 20px 30px;
 		border-radius: 30px;
-
-		.rating {
-		  color: white;
-		  background-color: #0077FF;
-		  padding: 6px 10px;
-		  border-radius: 13px;
-		  font-weight: bold;
-		  font-size: 28px;
-		}
 	  }
 
 	  .country {
@@ -71,6 +62,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		.rating {
+		  color: white;
+		  background-color: #0077FF;
+		  padding: 6px 10px;
+		  border-radius: 13px;
+		  font-weight: bold;
+		  font-size: 28px;
+		}
 	  }
 	}
   }
