@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .listFilms {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 4% 1% 4%;
+	gap: 4vw;
+
+	.cardFilm {
+	  background-color: white;
+	  border-radius: 20px;
+	  overflow: hidden;
+	  width: 185px;
+	  cursor: pointer;
+
+	  .rating {
+		position: absolute;
+		top: 262px;
+		right: 14px;
+		color: white;
+		background-color: #0077FF;
+		padding: 4px 7px;
+		border-radius: 13px;
+		font-weight: bold;
+	  }
+
+	  .container-img {
+		width: 185px;
+		height: 278px;
+
+		img {
+		  object-fit: cover;
+		  height: 100%;
+		  width: 100%;
+		}
+	  }
+
+	  .title {
+		font-weight: bold;
+		white-space: normal;
+		font-size: 18px;
+	  }
+
+	  .date {
+		color: grey;
+	  }
+	}
+  }
+}

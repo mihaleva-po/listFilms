@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+    HashRouter as Router,
+    Routes,
+    Route
+} from "react-router-dom";
+import PopularFilms from "./components/popularFilms/popularFilms";
+import CardFilm from "./components/cardFilm/cardFilm";
+import styles from './App.module.scss';
+import {QueryClient, QueryClientProvider} from "react-query";
+
+
+const query = new QueryClient();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <QueryClientProvider client={query}>
+            <div className={styles['header']}>
+                <p>Популярные фильмы</p>
+            </div>
+            <Router>
+                <Routes>
+                    <Route element={<PopularFilms/>} path={'/'}/>
+                    <Route element={<CardFilm/>} path={'/description/:id'}/>
+                </Routes>
+            </Router>
+        </QueryClientProvider>
+    );
 }
 
 export default App;

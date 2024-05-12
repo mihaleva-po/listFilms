@@ -1,0 +1,77 @@
+.container {
+
+  .main {
+	padding: 40px;
+	margin-left: 30px;
+	display: flex;
+	gap: 50px;
+
+	.container-img {
+	  height: auto;
+	  width: auto;
+	  min-width: 300px;
+
+	  img {
+		object-fit: cover;
+		width: 100%;
+		border-radius: 30px;
+	  }
+	}
+
+	.description {
+	  display: flex;
+	  flex-direction: column;
+	  margin-right: 20px;
+	  padding: 20px 30px;
+
+	  .blockWithTitle {
+		background-color: white;
+		border-radius: 30px;
+		padding: 20px 30px;
+		white-space: nowrap;
+
+		.date {
+		  color: grey;
+		  margin-top: 5px;
+		}
+	  }
+
+	  h1, h3 {
+		margin: 0;
+		padding: 0;
+	  }
+
+	  h1 {
+		font-size: 40px;
+	  }
+
+	  .overview {
+		margin-top: 20px;
+		font-size: 25px;
+		background-color: white;
+		padding: 20px 30px;
+		border-radius: 30px;
+
+		.rating {
+		  color: white;
+		  background-color: #0077FF;
+		  padding: 6px 10px;
+		  border-radius: 13px;
+		  font-weight: bold;
+		  font-size: 28px;
+		}
+	  }
+
+	  .country {
+		margin-top: 20px;
+		font-size: 20px;
+		background-color: white;
+		padding: 20px 30px;
+		border-radius: 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	  }
+	}
+  }
+}
