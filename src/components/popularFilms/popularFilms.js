@@ -18,8 +18,6 @@ const PopularFilms = () => {
     useEffect(() => {
         if (data) {
             setListFilms((prevListFilms) => [...prevListFilms, ...data])
-        } else {
-            console.log('yes');
         }
     }, [data]);
 
@@ -27,7 +25,6 @@ const PopularFilms = () => {
         const {scrollTop, clientHeight, scrollHeight} = document.documentElement;
         if (scrollTop + clientHeight >= scrollHeight * 0.9) {
             setPage(page + 1);
-            console.log(page);
         }
     };
 
