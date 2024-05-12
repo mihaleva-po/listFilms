@@ -18,6 +18,8 @@ const PopularFilms = () => {
     useEffect(() => {
         if (data) {
             setListFilms((prevListFilms) => [...prevListFilms, ...data])
+        } else {
+            console.log('yes');
         }
     }, [data]);
 
@@ -46,43 +48,50 @@ const PopularFilms = () => {
 
     return (
         <div className={styles['container']}>
-            <div className={styles['listFilms']}>
 
-                {listFilms.map((film, i) => (
-                    <div className={styles['cardFilm']} key={i} onClick={() => goCardFilm(film?.id)}>
-                        <div style={{position: 'relative'}}>
-                            <div className={styles['container-img']}>
-                                <img alt={'poster'}
-                                     src={`https://image.tmdb.org/t/p/w185/${film?.poster_path}`}/>
-                            </div>
+            {
+                listFilms.length <= 0 && !isLoading ?
+                    <h1>Включите VPN!</h1>
+                    :
+                    <div className={styles['listFilms']}>
+                        {
+                            listFilms.map((film, i) => (
+                                <div className={styles['cardFilm']} key={i} onClick={() => goCardFilm(film?.id)}>
+                                    <div style={{position: 'relative'}}>
+                                        <div className={styles['container-img']}>
+                                            <img alt={'poster'}
+                                                 src={`https://image.tmdb.org/t/p/w185/${film?.poster_path}`}/>
+                                        </div>
 
-                            {
-                                Math.round(film?.vote_average * 10) / 10 === 0 ?
-                                    null
-                                    :
-                                    <p className={styles['rating']}>{(Math.round(film?.vote_average * 10) / 10).toFixed(1)}</p>
-                            }
+                                        {
+                                            Math.round(film?.vote_average * 10) / 10 === 0 ?
+                                                null
+                                                :
+                                                <p className={styles['rating']}>{(Math.round(film?.vote_average * 10) / 10).toFixed(1)}</p>
+                                        }
 
-                        </div>
+                                    </div>
 
-                        <div style={{margin: '10px 15px 15px 15px'}}>
-                            <p className={styles['title']}>{film?.title}</p>
+                                    <div style={{margin: '10px 15px 15px 15px'}}>
+                                        <p className={styles['title']}>{film?.title}</p>
 
-                            <p className={styles['date']}>
-                                {
-                                    (film?.release_date).length > 0
-                                        ?
-                                        (format(parseISO(film?.release_date), 'LLLLLLLLLLLL yyyy',
-                                            {locale: ruLocale})).charAt(0).toUpperCase() +
-                                        (format(parseISO(film?.release_date), 'LLLLLLLLLLLL yyyy',
-                                            {locale: ruLocale})).slice(1)
-                                        : null}
-                            </p>
-
-                        </div>
+                                        <p className={styles['date']}>
+                                            {
+                                                (film?.release_date).length > 0
+                                                    ?
+                                                    (format(parseISO(film?.release_date), 'LLLLLLLLLLLL yyyy',
+                                                        {locale: ruLocale})).charAt(0).toUpperCase() +
+                                                    (format(parseISO(film?.release_date), 'LLLLLLLLLLLL yyyy',
+                                                        {locale: ruLocale})).slice(1)
+                                                    : null}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
-                ))}
-            </div>
+            }
+
             {
                 isLoading ? <Loading/> : null
             }
