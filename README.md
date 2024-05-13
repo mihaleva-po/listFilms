@@ -1,6 +1,6 @@
 # Список фильмов и карточка фильмов
 
-Использован API [TMDB](https://developer.themoviedb.org/docs/getting-started)
+Использован API [TMDB](https://developer.themoviedb.org/docs/getting-started). <br>
 Используйте VPN для загрузки веб-сайта.
 
 ## Стек технологий и библиотек
