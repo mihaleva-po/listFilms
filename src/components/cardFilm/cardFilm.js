@@ -33,7 +33,7 @@ const CardFilm = () => {
 
                     <div className={styles['blockWithTitle']}>
                         <h1>{data?.title}</h1>
-                        <div className={styles['date']} style={{display: 'flex'}}>
+                        <div className={styles['date']}>
 
                             <p>
                                 {(format(parseISO(data?.release_date), 'LLLLLLLLLLLL yyyy',
@@ -64,6 +64,7 @@ const CardFilm = () => {
                                 <p key={i}>{el}</p>
                             ))}
                             </div>
+
                             <p><b>Оригинальный язык:</b> {data?.original_language}</p>
                         </div>
 
