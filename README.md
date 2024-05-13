@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+# Список фильмов и карточка фильмов
+
+Использован API [TMDB](https://developer.themoviedb.org/docs/getting-started)
+Используйте VPN для загрузки веб-сайта.
+
+## Стек технологий и библиотек
+<li>React</li>
+<li>useEffect, useState</li>
+<li>React Router</li>
+<li>React Query</li>
+<li>SCSS</li>
+<li>API</li>
+<li>react-loading</li>
+<li>date-fns</li>
+<li>media queries</li>
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
