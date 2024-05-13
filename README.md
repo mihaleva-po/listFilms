@@ -1,9 +1,9 @@
-# Список фильмов и карточка фильмов
+# List of movies and movie cards
 
-Создано с помощью [API TMDB](https://developer.themoviedb.org/docs/getting-started). <br>
-Используйте VPN для загрузки веб-сайта.
+Created with [API TMDB](https://developer.themoviedb.org/docs/getting-started). <br>
+Use VPN to access the website.
 
-## Стек технологий и библиотек
+## Stack of technologies and libraries
 <li>React</li>
 <li>useEffect, useState</li>
 <li>React Router</li>
